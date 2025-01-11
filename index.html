@@ -6,14 +6,30 @@
   <meta name="description" content="WDD 231 - Course Home Page for responsive web design using HTML, CSS, and JavaScript.">
   <meta name="author" content="Your Name">
   <title>WDD 231 | Course Home Page</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/dates.js" defer></script>
-  <script src="scripts/courses.js" defer></script>
+  
+  <link>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</link>
+  <script>
+    // JavaScript for navigation menu toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+
+      // JavaScript for current year and last modified date
+      document.getElementById("currentyear").textContent = new Date().getFullYear();
+      document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+    });
+  </script>
 </head>
 <body>
-    <style>
-        body {
+  <style>
+    body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -21,8 +37,8 @@
     }
     
     header {
-      background: #333;
-      color: white;
+      background: #7abd10;
+      color: rgb(17, 150, 121);
       padding: 1rem;
     }
     
@@ -37,7 +53,7 @@
       background: none;
       border: none;
       font-size: 1.5rem;
-      color: white;
+      color: rgba(2, 33, 46, 0.918);
     }
     
     ul {
@@ -49,14 +65,14 @@
     
     ul.hidden {
       display: none;
-    } 
+    }
     
     ul li {
       margin-right: 1rem;
     }
     
     ul li a {
-      color: white;
+      color: rgb(0, 0, 0);
       text-decoration: none;
     }
     
@@ -65,26 +81,27 @@
     }
     
     footer {
-      background: #333;
-      color: white;
+      background: #77700b;
+      color: rgb(32, 191, 231);
       text-align: center;
       padding: 1rem;
     }
-    
-      </style>
-    <header>
+  </style>
+  
+  <header>
     <nav>
       <button id="menu-toggle" class="hamburger">☰</button>
       <ul id="nav-menu" class="hidden">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="#">Chamber</a></li>
-        <li><a href="https://web-toson" target="_blank">GitHub Profile</a></li>
-        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub Profile</a></li>
+        <li><a href="https://www.linkedin.com/in/ansu-tommy-04074b336">LinkedIn</a></li>
+        
       </ul>
     </nav>
   </header>
- 
-  <main>
+    
+  
     <section>
       <h2>Welcome</h2>
       <p>Welcome to the course home page for WDD 231.</p>
@@ -97,15 +114,16 @@
         <button id="cse-courses">CSE Courses</button>
       </div>
       <div id="course-list"></div>
-      <p>Total Credits: <span id="total-credits">0</span></p>
+      <p>Total Credits: <span id="total-credits">2</span></p>
     </section>
     <section>
       <h2>About</h2>
-      <p>This page demonstrates responsive web design principles and JavaScript functionality.</p>
+      <p>This page demonstrates responsive web design principles and functionality.</p>
     </section>
   </main>
+  
   <footer>
-    <p>&copy; <span id="currentyear"></span> Your Name, Your State or Country</p>
+    <p>&copy; <span id="currentyear"></span> Ansu Tommy, Freetown, Sierra Leone</p>
     <p id="lastModified"></p>
   </footer>
 </body>
