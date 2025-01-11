@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 231 - Course Home Page for responsive web design using HTML, CSS, and JavaScript.">
+  <meta name="author" content="Your Name">
+  <title>WDD 231 | Course Home Page</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .hamburger {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+    }
+    
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    ul.hidden {
+      display: none;
+    } 
+    
+    ul li {
+      margin-right: 1rem;
+    }
+    
+    ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    main {
+      padding: 1rem;
+    }
+    
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    
+      </style>
+    <header>
+    <nav>
+      <button id="menu-toggle" class="hamburger">☰</button>
+      <ul id="nav-menu" class="hidden">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="https://web-toson" target="_blank">GitHub Profile</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>Welcome to the course home page for WDD 231.</p>
+    </section>
+    <section id="courses">
+      <h2>Courses</h2>
+      <div id="course-filters">
+        <button id="all-courses">All Courses</button>
+        <button id="wdd-courses">WDD Courses</button>
+        <button id="cse-courses">CSE Courses</button>
+      </div>
+      <div id="course-list"></div>
+      <p>Total Credits: <span id="total-credits">0</span></p>
+    </section>
+    <section>
+      <h2>About</h2>
+      <p>This page demonstrates responsive web design principles and JavaScript functionality.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Your Name, Your State or Country</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
