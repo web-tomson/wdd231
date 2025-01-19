@@ -1,0 +1,23 @@
+[
+    {
+        "name": "IDWEB",
+        "address": "15 New England ID 83905",
+        "phone": "(232) 342-9386",
+        "website": "https://idahowebsites.com",
+        "membership": 1
+    },
+    {
+        "name": "Surge Web Design",
+        "address": "72  Air Drive Manbo ID 86647",
+        "phone": "(232) 631-0640",
+        "website": "https://surgewebdesign.com",
+        "membership": 2
+    },
+    {
+        "name": "Peppershock Media",
+        "address": "1215 3rd Street Joe ID 83851",
+        "phone": "(232) 461-5070",
+        "website": "https://peppershock.com",
+        "membership": 3
+    }
+]
