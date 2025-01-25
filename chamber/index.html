@@ -3,89 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Miguel Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/main.js" defer></script>
+    <title>Freetown Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="container">
-            <h1>San Miguel Chamber of Commerce</h1>
+            <h1>Freetown Chamber of Commerce</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="discover.html">Discover</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Area -->
     <main>
-        <!-- Hero Image Section -->
         <section class="hero">
-            <img src="images/freetown view.jpg" alt="San Miguel City View">
-            <div class="hero-text">
-                <h2>Welcome to the San Miguel Chamber of Commerce</h2>
-                <p>Your partner in business growth and community development.</p>
-            </div>
+            <img src="images/freetown view - copy.jpg" alt="Scenic view of Freetown">
+            <a href="join.html" class="cta">Join the Chamber</a>
         </section>
 
-        <!-- Call to Action Section -->
-        <section class="cta">
-            <a href="join.html" class="cta-button">Join the Chamber of Commerce Today</a>
-        </section>
-
-        <!-- Current Events Section -->
         <section class="events">
-            <h2>Upcoming Events</h2>
-            <div class="event">
-                <h3>Annual Business Expo</h3>
-                <p>Date: March 15, 2025</p>
-                <p>Location: Downtown Plaza</p>
-            </div>
-            <div class="event">
-                <h3>Networking Lunches</h3>
-                <p>Date: April 10, 2025</p>
-                <p>Location: Freetow International Conference Center</p>
+            <h2>Current Events</h2>
+            <div class="events-container">
+                <p>No current events at the moment. Stay tuned!</p>
+                <!-- Event cards will go here -->
             </div>
         </section>
 
-        <!-- Weather Section -->
         <section class="weather">
             <h2>Current Weather</h2>
-            <p id="current-temp">Loading temperature...</p>
-            <p id="current-description">Loading weather description...</p>
-            <div id="forecast">
-                <!-- 3-day forecast will be dynamically added here -->
+            <div class="weather-container">
+                <div id="current-weather">
+                    <p>Loading weather data...</p>
+                </div>
+                <div id="weather-forecast">
+                    <!-- Weather forecast will go here -->
+                </div>
             </div>
         </section>
 
-        <!-- Company Spotlights Section -->
         <section class="spotlights">
             <h2>Member Spotlights</h2>
-            <div id="spotlight-container">
-                <!-- Spotlight cards will be dynamically added here -->
+            <div class="spotlights-container">
+                <!-- Spotlight cards will go here -->
             </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 San Miguel Chamber of Commerce. All Rights Reserved.</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <address>
+                Freetown Chamber of Commerce<br>
+                Guma Building,Lamina Sankoh Street,Freetown<br>
+                <a href="mailto: info@chamberofcommerce.sl"> info@chamberofcommerce.sl</a><br>
+                <a href="tel: +232 22 22 09 04"> (+232) 22 22 09 04</a>
+            </address>
+            <div class="social">
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
         </div>
+        <p>&copy; 2025 Freetown Chamber of Commerce | Last Modification: 01/25/2025</p>
     </footer>
 </body>
 </html>
