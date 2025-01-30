@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomson Bus Company</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Tomson Bus Company</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Welcome to the Tomson Bus Company! We're a community of T-bus enthusiasts who enjoy exploring trails and connecting with fellow driver's.</p>
+    </section>
+
+    <section id="events">
+      <h2>Upcoming Events</h2>
+     <ul id="event-list">
+      <p>Digital Transportation</p>
+        <!-- Events will be dynamically added here -->
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="images/photo-bus view.avif" alt="Ride 3">
+        <img src="images/istockphoto.jpg" alt="Ride 1">
+        <img src="images/inchudes.happy.jpg" alt="Ride 2">
+        <img src="images/with the student.webp" alt="Ride 3">
+        <img src="images/photo-bus.avif" alt="Ride 3">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 t-Bus Driving Club. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
