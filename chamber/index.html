@@ -6,12 +6,16 @@
     <title>Freetown Chamber of Commerce</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <section id="weather"></section>
+    <section id="company-spotlight"></section>
+    <script src="script.js"></script>
+    
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Freetown Chamber of Commerce</h1>
-            <nav>
+            <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
@@ -22,17 +26,25 @@
         </div>
     </header>
 
+    <nav class="breadcrumb" aria-label="Breadcrumb Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
     <main>
         <section class="hero">
-            <img src="images/freetown view - copy.jpg" alt="Scenic view of Freetown">
-            <a href="join.html" class="cta">Join the Chamber</a>
+            <img src="images/freetown view - Copy.jpg" alt="Scenic view of Freetown" loading="lazy">
+            <div class="hero-overlay">
+                <h2>Welcome to the Chamber</h2>
+                <a href="join.html" class="cta">Join the Chamber</a>
+            </div>
         </section>
 
         <section class="events">
             <h2>Current Events</h2>
             <div class="events-container">
                 <p>No current events at the moment. Stay tuned!</p>
-                <!-- Event cards will go here -->
             </div>
         </section>
 
@@ -42,16 +54,17 @@
                 <div id="current-weather">
                     <p>Loading weather data...</p>
                 </div>
-                <div id="weather-forecast">
-                    <!-- Weather forecast will go here -->
-                </div>
+                <div id="weather-forecast"></div>
             </div>
         </section>
 
         <section class="spotlights">
             <h2>Member Spotlights</h2>
             <div class="spotlights-container">
-                <!-- Spotlight cards will go here -->
+                <div class="spotlight-item">
+                    <h3>Featured Business</h3>
+                    <p>Highlighting a key member of our chamber.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -60,9 +73,9 @@
         <div class="container">
             <address>
                 Freetown Chamber of Commerce<br>
-                Guma Building,Lamina Sankoh Street,Freetown<br>
-                <a href="mailto: info@chamberofcommerce.sl"> info@chamberofcommerce.sl</a><br>
-                <a href="tel: +232 22 22 09 04"> (+232) 22 22 09 04</a>
+                Guma Building, Lamina Sankoh Street, Freetown<br>
+                <a href="mailto:info@chamberofcommerce.sl">info@chamberofcommerce.sl</a><br>
+                <a href="tel:+23222220904">(+232) 22 22 09 04</a>
             </address>
             <div class="social">
                 <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
@@ -70,7 +83,11 @@
                 <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
             </div>
         </div>
-        <p>&copy; 2025 Freetown Chamber of Commerce | Last Modification: 01/25/2025</p>
+        <p>&copy; 2025 Freetown Chamber of Commerce | Last Modification: <span id="lastModified"></span></p>
     </footer>
+
+    <script>
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
 </body>
 </html>
