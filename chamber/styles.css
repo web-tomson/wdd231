@@ -1,13 +1,13 @@
    body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #615357;
   background-color: #f4f4f4;
   margin: 0;
 }
 
 header {
-  background: #333;
+  background: #199791;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -26,7 +26,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: hwb(231 3% 54% / 0.89);
   text-decoration: none;
 }
 
@@ -58,7 +58,7 @@ nav ul li a {
 }
 
 footer {
-  background: #333;
+  background: #3d3a3ab0;
   color: #fff;
   text-align: center;
   padding: 1rem 0;
