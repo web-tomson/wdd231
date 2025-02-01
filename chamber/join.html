@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Join Our Chamber</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <section class="form-container">
+            <form action="thankyou.html" method="get">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label>First Name:
+                        <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
+                    </label>
+                    <label>Last Name:
+                        <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Account Information</legend>
+                    <label>Email:
+                        <input type="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter a valid email address">
+                    </label>
+                    <label>Mobile Phone:
+                        <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Organization Information</legend>
+                    <label>Organization Name:
+                        <input type="text" name="organization" required autocomplete="organization" title="Enter your organization's name">
+                    </label>
+                    <label>Organization Title:
+                        <input type="text" name="orgTitle" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title" title="Only letters, hyphens, and spaces allowed (min 7 characters)">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label>Select Membership:
+                        <select name="membership">
+                            <option value="np">NP Membership (Free)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Business Description</legend>
+                    <label>Description:
+                        <textarea name="description" title="Describe your business"></textarea>
+                    </label>
+                </fieldset>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+        <section class="membership-cards">
+            <div class="card" id="np">
+                <h3>NP Membership</h3>
+                <button onclick="openModal('np-modal')">More Info</button>
+            </div>
+            <div class="card" id="bronze">
+                <h3>Bronze Membership</h3>
+                <button onclick="openModal('bronze-modal')">More Info</button>
+            </div>
+            <div class="card" id="silver">
+                <h3>Silver Membership</h3>
+                <button onclick="openModal('silver-modal')">More Info</button>
+            </div>
+            <div class="card" id="gold">
+                <h3>Gold Membership</h3>
+                <button onclick="openModal('gold-modal')">More Info</button>
+            </div>
+        </section>
+        <div class="modal" id="np-modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('np-modal')">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <p>Free membership for non-profit organizations.</p>
+            </div>
+        </div>
+        <div class="modal" id="bronze-modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('bronze-modal')">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <p>Basic membership with community engagement.</p>
+            </div>
+        </div>
+        <div class="modal" id="silver-modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('silver-modal')">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <p>Includes additional networking and advertising benefits.</p>
+            </div>
+        </div>
+        <div class="modal" id="gold-modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('gold-modal')">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <p>Premium benefits with top-tier exposure and training events.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
+
+<!-- Thank You Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Joining!</h1>
+    </header>
+    <main>
+        <p>Thank you for submitting your application. Here is your submitted information:</p>
+        <ul>
+            <li><strong>First Name:</strong> <span id="firstName"></span></li>
+            <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+            <li><strong>Email:</strong> <span id="email"></span></li>
+            <li><strong>Mobile Phone:</strong> <span id="phone"></span></li>
+            <li><strong>Organization Name:</strong> <span id="organization"></span></li>
+            <li><strong>Submission Date:</strong> <span id="timestamp"></span></li>
+        </ul>
+        <a href="index.html">Return to Home</a>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("firstName").textContent = params.get("firstName") || "N/A";
+        document.getElementById("lastName").textContent = params.get("lastName") || "N/A";
+        document.getElementById("email").textContent = params.get("email") || "N/A";
+        document.getElementById("phone").textContent = params.get("phone") || "N/A";
+        document.getElementById("organization").textContent = params.get("organization") || "N/A";
+        document.getElementById("timestamp").textContent = params.get("timestamp") || "N/A";
+    </script>
+</body>
+</html>
