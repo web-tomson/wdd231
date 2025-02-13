@@ -1,24 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Dynamically add upcoming events
-    const eventList = document.getElementById("event-list");
-    const events = [
-      { name: "Spring Trail Ride", date: "March 15, 2025" },
-      { name: "Mountain Adventure", date: "April 22, 2025" },
-      { name: "Coastal Breeze Ride", date: "May 5, 2025" },
-    ];
-  
-    events.forEach(event => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${event.name} - ${event.date}`;
-      eventList.appendChild(listItem);
-    });
-  
-    // Handle form submission
-    const form = document.getElementById("contact-form");
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("Thank you for contacting us! We'll get back to you soon.");
-      form.reset();
-    });
-  });
-  
+// Lazy Loading for Images
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('img[loading="lazy"]');
+
+  const lazyLoad = () => {
+      images.forEach(img => {
+          if (img.getBoundingClientRect().top < window.innerHeight && img.getBoundingClientRect().bottom > 0) {
+              img.src = img.dataset.src;
+              img.removeAttribute('loading');
+              img.classList.add('loaded');
+          }
+      });
+  };
+
+  window.addEventListener('scroll', lazyLoad);
+  window.addEventListener('resize', lazyLoad);
+
+  lazyLoad();
+});
+
+// DOM Manipulation Example - Interactive Button
+document.querySelector('.contact-form button').addEventListener('click', function (event) {
+  event.preventDefault();
+  alert('Thank you for your message!');
+});
+
+// Fetch JSON Data (Optional for API Integration)
+const loadData = async () => {
+  try {
+      const response = await fetch('data.json'); // Replace with your data source URL
+      const data = await response.json();
+      console.log(data); // Process data dynamically
+  } catch (error) {
+      console.error('Error fetching data:', error);
+  }
+};
+
+loadData();
+
+// Example of using localStorage
+const saveFormData = () => {
+  const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value
+  };
+  localStorage.setItem('contactFormData', JSON.stringify(formData));
+};
+
+document.getElementById('contactForm').addEventListener('submit', saveFormData);
