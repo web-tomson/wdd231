@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Sunrise Cafe",
+      "address": "12 Beach Rd, Freetown",
+      "phone": "+23276000001",
+      "website": "https://sunrisecafe.com",
+      "image": "sunrise.jpg",
+      "level": 1
+    },
+    {
+      "name": "Krio Textiles",
+      "address": "5 Cotton St, Freetown",
+      "phone": "+23276000002",
+      "website": "https://kriotextiles.org",
+      "image": "kriotextiles.jpg",
+      "level": 2
+    },
+    {
+      "name": "Atlantic Tours",
+      "address": "Harbour Front, Freetown",
+      "phone": "+23276000003",
+      "website": "https://atlantictours.com",
+      "image": "atlantic.jpg",
+      "level": 3
+    },
+    {
+      "name": "GreenTech Solar",
+      "address": "Industrial Park, Freetown",
+      "phone": "+23276000004",
+      "website": "https://greentech.org",
+      "image": "greentech.jpg",
+      "level": 3
+    },
+    {
+      "name": "Coastal Pharmacy",
+      "address": "Market St, Freetown",
+      "phone": "+23276000005",
+      "website": "https://coastalpharm.org",
+      "image": "coastal.jpg",
+      "level": 1
+    },
+    {
+      "name": "Lighthouse Bookstore",
+      "address": "King St, Freetown",
+      "phone": "+23276000006",
+      "website": "https://lighthousebooks.com",
+      "image": "lighthouse.jpg",
+      "level": 2
+    },
+    {
+      "name": "Harbour Mechanics",
+      "address": "Dockside, Freetown",
+      "phone": "+23276000007",
+      "website": "https://harbourmech.org",
+      "image": "harbourmech.jpg",
+      "level": 1
+    }
+  ]
+}

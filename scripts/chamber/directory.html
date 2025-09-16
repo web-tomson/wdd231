@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Freetown Chamber Directory</title>
+  <meta name="description" content="Chamber of Commerce directory for Freetown region — local businesses and members."/>
+  <meta name="author" content="Ansu Tommy" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Freetown Chamber Directory" />
+  <meta property="og:description" content="Find local businesses and chamber members in the Freetown region." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="scripts/members.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../index.html" class="logo">Freetown Chamber</a>
+      <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="primaryNav">☰</button>
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="directory.html" aria-current="page">Directory</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Directory — Freetown Chamber of Commerce</h1>
+    <p class="lead">Browse chamber members. Toggle between card grid and list view. Use the controls to filter and view details.</p>
+
+    <div class="controls">
+      <div class="view-toggle" role="group" aria-label="View toggle">
+        <button id="gridView" class="btn active">Grid</button>
+        <button id="listView" class="btn">List</button>
+      </div>
+      <div class="filter">
+        <label for="levelSelect">Membership level:</label>
+        <select id="levelSelect">
+          <option value="all">All</option>
+          <option value="1">Member</option>
+          <option value="2">Silver</option>
+          <option value="3">Gold</option>
+        </select>
+      </div>
+    </div>
+
+    <section id="members" class="members grid" aria-live="polite">
+      <!-- Member cards inserted here by JavaScript -->
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <div class="footer-contact">
+      <p>Contact: Freetown Chamber — Phone: +232 76 000000 — Email: info@freetownchamber.org</p>
+      <p>Developer: Ansu Tommy | WDD231 — Last Modified: 2025 <span id="lastModified"></span></p>
+    </div>
+    <p>&copy; <span id="year"></span> Freetown Chamber of Commerce</p>
+  </footer>
+</body>
+</html>
